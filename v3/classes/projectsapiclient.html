@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PracticeAPIClient | xero-node</title>
+	<title>ProjectsAPIClient | xero-node</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -38,17 +38,13 @@
 					<a href="../index.html">xero-node</a>
 				</li>
 			</ul>
-			<h1>Class: PracticeAPIClient</h1>
+			<h1>Class: ProjectsAPIClient</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -56,7 +52,7 @@
 						<a href="baseapiclient.html" class="tsd-signature-type">BaseAPIClient</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">PracticeAPIClient</span>
+								<span class="target">ProjectsAPIClient</span>
 							</li>
 						</ul>
 					</li>
@@ -69,13 +65,19 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="practiceapiclient.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="projectsapiclient.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="practiceapiclient.html#oauth1client" class="tsd-kind-icon">oauth1<wbr>Client</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="projectsapiclient.html#oauth1client" class="tsd-kind-icon">oauth1<wbr>Client</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-class"><a href="projectsapiclient.html#projects" class="tsd-kind-icon">projects</a></li>
 							</ul>
 						</section>
 					</div>
@@ -87,14 +89,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>PracticeAPIClient<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/xeroclientconfiguration.html" class="tsd-signature-type">XeroClientConfiguration</a>, authState<span class="tsd-signature-symbol">?: </span><a href="../interfaces/accesstoken.html" class="tsd-signature-type">AccessToken</a>, _oAuth1HttpClient<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ioauth1httpclient.html" class="tsd-signature-type">IOAuth1HttpClient</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="practiceapiclient.html" class="tsd-signature-type">PracticeAPIClient</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>ProjectsAPIClient<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/xeroclientconfiguration.html" class="tsd-signature-type">XeroClientConfiguration</a>, authState<span class="tsd-signature-symbol">?: </span><a href="../interfaces/accesstoken.html" class="tsd-signature-type">AccessToken</a>, _oAuth1HttpClient<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ioauth1httpclient.html" class="tsd-signature-type">IOAuth1HttpClient</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="projectsapiclient.html" class="tsd-signature-type">ProjectsAPIClient</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="baseapiclient.html">BaseAPIClient</a>.<a href="baseapiclient.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/3b686aa/src/PracticeAPIClient.ts#L5">PracticeAPIClient.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/3b686aa/src/ProjectsAPIClient.ts#L12">ProjectsAPIClient.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -109,7 +111,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> _oAuth1HttpClient: <a href="../interfaces/ioauth1httpclient.html" class="tsd-signature-type">IOAuth1HttpClient</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="practiceapiclient.html" class="tsd-signature-type">PracticeAPIClient</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="projectsapiclient.html" class="tsd-signature-type">ProjectsAPIClient</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -128,6 +130,92 @@
 					</aside>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class">
+					<a name="projects" class="tsd-anchor"></a>
+					<h3>projects</h3>
+					<div class="tsd-signature tsd-kind-icon">projects<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/3b686aa/src/ProjectsAPIClient.ts#L18">ProjectsAPIClient.ts:18</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="projects.create" class="tsd-anchor"></a>
+						<h3>create</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/project.html" class="tsd-signature-type">Project</a><span class="tsd-signature-symbol">&gt;</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/3b686aa/src/ProjectsAPIClient.ts#L35">ProjectsAPIClient.ts:35</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>args: <span class="tsd-signature-type">object</span></h5>
+										<ul class="tsd-parameters">
+										</ul>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/project.html" class="tsd-signature-type">Project</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="projects.get" class="tsd-anchor"></a>
+						<h3>get</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">PagingArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/projectsresponse.html" class="tsd-signature-type">ProjectsResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/3b686aa/src/ProjectsAPIClient.ts#L19">ProjectsAPIClient.ts:19</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">PagingArgs</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/projectsresponse.html" class="tsd-signature-type">ProjectsResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="projects.getsingle" class="tsd-anchor"></a>
+						<h3>get<wbr>Single</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">get<wbr>Single<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/project.html" class="tsd-signature-type">Project</a><span class="tsd-signature-symbol">&gt;</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/3b686aa/src/ProjectsAPIClient.ts#L25">ProjectsAPIClient.ts:25</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>args: <span class="tsd-signature-type">object</span></h5>
+										<ul class="tsd-parameters">
+										</ul>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/project.html" class="tsd-signature-type">Project</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							</li>
+						</ul>
+					</section>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
@@ -138,14 +226,17 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-is-private">
-						<a href="practiceapiclient.html" class="tsd-kind-icon">PracticeAPIClient</a>
+					<li class="current tsd-kind-class">
+						<a href="projectsapiclient.html" class="tsd-kind-icon">ProjectsAPIClient</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="practiceapiclient.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="projectsapiclient.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="practiceapiclient.html#oauth1client" class="tsd-kind-icon">oauth1<wbr>Client</a>
+								<a href="projectsapiclient.html#oauth1client" class="tsd-kind-icon">oauth1<wbr>Client</a>
+							</li>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class">
+								<a href="projectsapiclient.html#projects" class="tsd-kind-icon">projects</a>
 							</li>
 						</ul>
 					</li>

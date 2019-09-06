@@ -44,41 +44,41 @@
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
 				<p><a href="https://badge.fury.io/js/xero-node"><img src="https://badge.fury.io/js/xero-node.svg" alt="npm version"></a>
-				<a href="https://circleci.com/gh/XeroAPI/xero-node/tree/v3"><img src="https://circleci.com/gh/XeroAPI/xero-node/tree/v3.svg?style=svg" alt="CircleCI"></a></p>
-				<h1 id="xero-node">xero-node</h1>
+				<a href="https://circleci.com/gh/XeroAPI/xero-node/tree/master"><img src="https://circleci.com/gh/XeroAPI/xero-node/tree/master.svg?style=svg" alt="CircleCI"></a></p>
+				<a href="#xero-node" id="xero-node" style="color: inherit; text-decoration: none;">
+					<h1>xero-node</h1>
+				</a>
 				<p>NodeJS Client for the <a href="http://developer.xero.com">Xero API</a>. Works with ES5, ES6+ and TypeScript.</p>
+				<p><a href="https://xeroapi.github.io/xero-node/v3">API Reference</a></p>
 				<p>Supports all application types:</p>
 				<ul>
 					<li>Private - apps that can only connect to a single organisation</li>
 					<li>Public - apps that can connect to any organisation, but only for 30 minutes at a time</li>
 					<li>Partner - approved apps that can automatically refresh tokens</li>
 				</ul>
-				<p>Version 3 has been rebuilt fron the ground-up using TypeScript, to make it
-				more maintainable and to take advantage of modern JavaScript features.</p>
-				<!-- [API Reference](https://xeroapi.github.io/xero-node/). -->
-				<h1 id="features">Features</h1>
+				<p>A great way to get started is our YouTube videos:</p>
 				<ul>
-					<li>v3.0.0<ul>
-							<li>all <a href="https://developer.xero.com/documentation/api/api-overview">accounting endpoints</a></li>
-							<li>generic methods (<code>get</code>, <code>put</code>, <code>post</code>, <code>delete</code>) for calling any unsupported endpoints</li>
-						</ul>
-					</li>
+					<li><a href="https://www.youtube.com/watch?v=pntUoUy8io4">How to make Private App calls using NodeJS and xero-node</a></li>
+					<li><a href="https://www.youtube.com/watch?v=SwyZctAmCu8">How to make Partner and Public App calls using NodeJS and xero-node</a></li>
 				</ul>
-				<h1 id="installation">Installation</h1>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h1>Installation</h1>
+				</a>
 				<p>This SDK is published as an npm package called <code>xero-node</code>.</p>
 				<p><code>npm install --save xero-node</code></p>
-				<h1 id="usage-example-for-private-apps">Usage Example for Private Apps</h1>
+				<a href="#usage-example-for-private-apps" id="usage-example-for-private-apps" style="color: inherit; text-decoration: none;">
+					<h1>Usage Example for Private Apps</h1>
+				</a>
 				<p>Create a <code>config.json</code> file:</p>
-				<pre><code class="lang-json">{
+				<pre><code class="language-json">{
     <span class="hljs-attr">"appType"</span>: <span class="hljs-string">"private"</span>,
     <span class="hljs-attr">"consumerKey"</span>: <span class="hljs-string">"your_consumer_key"</span>,
     <span class="hljs-attr">"consumerSecret"</span>: <span class="hljs-string">"your_consumer_secret"</span>,
     <span class="hljs-attr">"callbackUrl"</span>: <span class="hljs-literal">null</span>,
     <span class="hljs-attr">"privateKeyPath"</span>: <span class="hljs-string">"C:\\keys\\your_private_key.pem"</span>
-}
-</code></pre>
+}</code></pre>
 				<p>Then add the following JavaScript (example works in NodeJS version 8 and above):</p>
-				<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> XeroClient = <span class="hljs-built_in">require</span>(<span class="hljs-string">'xero-node'</span>).AccountingAPIClient;
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> XeroClient = <span class="hljs-built_in">require</span>(<span class="hljs-string">'xero-node'</span>).AccountingAPIClient;
 <span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./config.json'</span>);
 
 <span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (</span>) =&gt;</span> {
@@ -91,20 +91,20 @@
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Number of invoices:'</span>, result.Invoices.length);
 
 })();
-
 </code></pre>
-				<h1 id="usage-example-for-public-and-partner-apps">Usage Example for Public and Partner Apps</h1>
+				<a href="#usage-example-for-public-and-partner-apps" id="usage-example-for-public-and-partner-apps" style="color: inherit; text-decoration: none;">
+					<h1>Usage Example for Public and Partner Apps</h1>
+				</a>
 				<p>Create a <code>config.json</code> file:</p>
-				<pre><code class="lang-json">{
+				<pre><code class="language-json">{
     <span class="hljs-attr">"appType"</span>: <span class="hljs-string">"public"</span>,
     <span class="hljs-attr">"consumerKey"</span>: <span class="hljs-string">"your_consumer_key"</span>,
     <span class="hljs-attr">"consumerSecret"</span>: <span class="hljs-string">"your_consumer_secret"</span>,
     <span class="hljs-attr">"callbackUrl"</span>: <span class="hljs-literal">null</span>,
     <span class="hljs-attr">"privateKeyPath"</span>: <span class="hljs-string">"C:\\keys\\your_private_key.pem"</span>
-}
-</code></pre>
+}</code></pre>
 				<p>Then add the following JavaScript (example works in NodeJS version 8 and above):</p>
-				<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> XeroClient = <span class="hljs-built_in">require</span>(<span class="hljs-string">'xero-node'</span>).AccountingAPIClient;
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> XeroClient = <span class="hljs-built_in">require</span>(<span class="hljs-string">'xero-node'</span>).AccountingAPIClient;
 <span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./config.json'</span>);
 
 <span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (</span>) =&gt;</span> {
@@ -158,37 +158,64 @@
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Number of invoices:'</span>, invoices.Invoices.length);
 
 })();
-
 </code></pre>
-				<h3 id="further-examples">Further Examples</h3>
+				<a href="#further-examples" id="further-examples" style="color: inherit; text-decoration: none;">
+					<h3>Further Examples</h3>
+				</a>
+				<p>Often the best palace for documentation is the integration tests in this repo. Please have a look:</p>
 				<ul>
 					<li><a href="src/__integration_tests__">Integration tests</a></li>
 					<li><a href="https://github.com/XeroAPI/xero-node-sample-app">Sample app</a></li>
 				</ul>
-				<h2 id="migration-from-v2">Migration from V2</h2>
-				<p>The biggest change is the number of function calls you have to make to complete your task. This is consistant across all endpoints. It&#39;s not JSON in and JSON out. your object never gets modified:</p>
-				<p>Example:</p>
-				<pre><code><span class="hljs-comment">// V2</span>
-<span class="hljs-keyword">let</span> invoiceObj = xero.core.invoices.newInvoice(invoiceJSON);
-<span class="hljs-keyword">let</span> result = <span class="hljs-keyword">await</span> invoiceObj.save()
-</code></pre><p>becomes:</p>
-				<pre><code><span class="hljs-comment">// V3</span>
-<span class="hljs-keyword">let</span> result = <span class="hljs-keyword">await</span> xero.invoices.create(invoiceJSON);
-</code></pre><p>Please also review the documentation around how to construct the client object. You no longer have to use specifc constructors for your App Type. Instead this information is passed in with your config object.</p>
-				<h1 id="contributing">Contributing</h1>
-				<h2 id="local-development">Local development</h2>
+				<a href="#what-about-endpoints-not-in-the-package-yet" id="what-about-endpoints-not-in-the-package-yet" style="color: inherit; text-decoration: none;">
+					<h3>What about endpoints not in the package yet?</h3>
+				</a>
+				<p>Sometimes there may be endpoints in the API which have not been added to this package. Feel free to send a PR. In the mean time we have implemented a way of calling any endpoint. Here is a few examples (replace <code>.get</code> with <code>.post</code> or <code>.put</code>):</p>
+				<ul>
+					<li><a href="https://github.com/XeroAPI/xero-node/blob/master/src/__integration_tests__/generic-endpoint.integration.tests.ts">Generic API calls private</a></li>
+					<li><a href="https://github.com/XeroAPI/xero-node/blob/master/src/__integration_tests__/partner-example-callbackUrl.tests.ts">Generic API calls public/partner</a></li>
+				</ul>
+				<a href="#private-key-as-an-env-var" id="private-key-as-an-env-var" style="color: inherit; text-decoration: none;">
+					<h2>Private key as an ENV var</h2>
+				</a>
+				<p>The config.json includes an optional field <code>privateKeyString</code>. Set this as an ENV var outside the of <code>xero-node</code> and pass it in with the config.</p>
+				<p>Private keys are of a particular format. If your using this method it needs to be a single string, and it must include the <code>-----BEGIN RSA PRIVATE KEY-----</code> and matching end part. Be sure to include a <code>\n</code> after this first line and before the last line, as well as <code>\</code> characters at the end of lines.</p>
+				<p>Here is an example:</p>
+				<pre><code>let xeroKeyString =
+"-----BEGIN RSA PRIVATE KEY-----<span class="hljs-tag">\<span class="hljs-name">n</span></span><span class="hljs-tag">\<span class="hljs-name">
+</span></span>cdfljkefrjkl45ljk34jkl4334lkj34ljk34343434<span class="hljs-tag">\<span class="hljs-name">
+</span></span>dsljdsjlkerjlk4343jkl34ljk34jkl34kjl34kjl34j<span class="hljs-tag">\<span class="hljs-name">
+</span></span>sajklsdalksdasdlkdslkdwlkdwskldskldslkd<span class="hljs-tag">\<span class="hljs-name">n</span></span><span class="hljs-tag">\<span class="hljs-name">
+</span></span>-----END RSA PRIVATE KEY-----";</code></pre><p>Here is a handy command to generate this string from your .pem file:</p>
+				<pre><code>$ awk 'NF {sub(/\r/, <span class="hljs-string">""</span>); printf <span class="hljs-string">"%s<span class="hljs-subst">\\</span>n"</span>,$<span class="hljs-number">0</span>;}' privatekey.pem</code></pre>
+				<a href="#migration-from-v2-to-v3" id="migration-from-v2-to-v3" style="color: inherit; text-decoration: none;">
+					<h2>Migration from V2 to V3</h2>
+				</a>
+				<p><a href="https://github.com/XeroAPI/xero-node/wiki/Migration-from-V2-to-V3">See here.</a></p>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h1>Contributing</h1>
+				</a>
+				<a href="#local-development" id="local-development" style="color: inherit; text-decoration: none;">
+					<h2>Local development</h2>
+				</a>
 				<p>There are lots of TODOs in code and on our GitHub Projects kanban board - feel free to pick one off.</p>
 				<p>After you clone the repository, run <code>npm install</code> to install required dependencies.</p>
-				<h3 id="running-the-tests">Running the tests</h3>
+				<a href="#running-the-tests" id="running-the-tests" style="color: inherit; text-decoration: none;">
+					<h3>Running the tests</h3>
+				</a>
 				<p>We need two private Apps to get around the ratelimits. They can be connected to the same Org.</p>
 				<ol>
 					<li>Copy <code>private-config-example.json</code> to <code>private-config.json</code> in the <a href="src/__integration_tests__">integration test directory</a>.</li>
-					<li>Copy it again to <code>1private-config.json</code> in the <a href="src/__integration_tests__">integration test directory</a>.</li>
+					<li>Copy it again to <code>private-config1.json</code> in the <a href="src/__integration_tests__">integration test directory</a>.</li>
 					<li>Overwrite the example values with your own from the <a href="https://developer.xero.com/myapps">Developer Portal</a>.</li>
-					<li>(Do the same for <code>partner-config-example.json</code> if required.)</li>
+					<li>(Do the same for <code>partner-config-example.json</code> and <code>xero-login.json</code>, if required.)</li>
 					<li>Run <code>npm test</code></li>
 				</ol>
-				<h2 id="project-philosophies">Project Philosophies</h2>
+				<p>For the partner tests to pass you will need a partner app. Don&#39;t worry if you don&#39;t have one and the test fails. It will run in CircleCI.</p>
+				<p>The Prepayments and Overpayments tests require Pre/Overpayments to be present in your organisation, again, don&#39;t worry too much if these fail for you - they run in CircleCI.</p>
+				<a href="#project-philosophies" id="project-philosophies" style="color: inherit; text-decoration: none;">
+					<h2>Project Philosophies</h2>
+				</a>
 				<ol>
 					<li><p>A simple and intuitive interface.
 						eg:</p>
@@ -198,7 +225,7 @@
 						<p> Matching SDK methods names to endpoints, allows consumers to read the official API documentation and translate it to SDK method calls quickly.</p>
 						<p> That rather than using HTTP verbs (<code>.put()</code>, <code>.post()</code> etc) the SDK will use actions. Example <code>get()</code>, <code>create()</code>,<code>delete()</code>, <code>update()</code>. This abstracts away Xero&#39;s <a href="https://developer.xero.com/documentation/api/requests-and-responses">funny</a> <code>PUT</code> vs <code>POST</code>.</p>
 					</li>
-					<li><p>A simple and single OAuth flow. Rather than automatically refreshing tokens, the SDK we will expose methods which allow the OAuth methods eg Refreshing Tokens etc. Consideration is also being made to OAuth2.</p>
+					<li><p>A simple and single OAuth flow. Rather than automatically refreshing tokens, the SDK will expose methods which allow the OAuth methods eg Refreshing Tokens etc. Consideration is also being made to OAuth2.</p>
 					</li>
 					<li><p>Abstracted underlyting OAuth/HTTP lib. This will allow swapping it out if we needed. The SDK won&#39;t bleed the OAuth libs exception types onto the consumer when it hits a 500/400 etc. Having a OAuth/HTTP layer will allow reuse and extension to other APIs (Payroll, Expenses etc).</p>
 					</li>
@@ -206,11 +233,29 @@
 					</li>
 					<li><p>Unit tests!</p>
 					</li>
-					<li><p>Writing the SDK in Typescript will allow us to provide TS types for the API&#39;s contracts, and it&#39;s what we use internally at Xero. This will also aid in self-generated docs.</p>
+					<li><p>Writing the SDK in Typescript allows us to provide TS types for the API&#39;s contracts, and it&#39;s what we use internally at Xero. This also enables generated docs.</p>
 					</li>
 				</ol>
-				<h2 id="maintainers">Maintainers</h2>
-				<p>@philals @iamam34 @bryanlloydtee @dannyvincent @dupski</p>
+				<a href="#maintainers" id="maintainers" style="color: inherit; text-decoration: none;">
+					<h2>Maintainers</h2>
+				</a>
+				<p>@iamam34 @kodyoconnell @bryanlloydtee @dannyvincent</p>
+				<p>Release:</p>
+				<pre><code class="language-sh">git checkout master
+git pull
+npm login
+npm version major|minor|patch
+npm publish
+git push origin master --tags</code></pre>
+				<p>Regenerate docs:</p>
+				<pre><code class="language-sh">git checkout master
+git pull
+npm run build-docs
+<span class="hljs-comment"># copy docs/ directory to clipboard</span>
+git checkout gh-pages
+<span class="hljs-comment"># paste and rename to v3/</span>
+git commit -am <span class="hljs-string">"regenerated typedoc for vX.X.X"</span>
+git push origin gh-pages</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -231,6 +276,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-is-private">
 						<a href="classes/practiceapiclient.html" class="tsd-kind-icon">PracticeAPIClient</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/projectsapiclient.html" class="tsd-kind-icon">ProjectsAPIClient</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/xeroerror.html" class="tsd-kind-icon">Xero<wbr>Error</a>
@@ -331,6 +379,12 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/headerargs.html" class="tsd-kind-icon">Header<wbr>Args</a>
 					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/historyrecord.html" class="tsd-kind-icon">History<wbr>Record</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-private">
+						<a href="interfaces/historyresponse.html" class="tsd-kind-icon">History<wbr>Response</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/ihttpclient.html" class="tsd-kind-icon">IHttp<wbr>Client</a>
 					</li>
@@ -409,11 +463,20 @@
 					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/overpaymentsresponse.html" class="tsd-kind-icon">Overpayments<wbr>Response</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-is-private">
+						<a href="interfaces/paginatedresponse.html" class="tsd-kind-icon">Paginated<wbr>Response</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/pagingargs.html" class="tsd-kind-icon">Paging<wbr>Args</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/payment.html" class="tsd-kind-icon">Payment</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/paymentservice.html" class="tsd-kind-icon">Payment<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-private">
+						<a href="interfaces/paymentservicesresponse.html" class="tsd-kind-icon">Payment<wbr>Services<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/paymentsresponse.html" class="tsd-kind-icon">Payments<wbr>Response</a>
@@ -426,6 +489,12 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/prepaymentsresponse.html" class="tsd-kind-icon">Prepayments<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/project.html" class="tsd-kind-icon">Project</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-private">
+						<a href="interfaces/projectsresponse.html" class="tsd-kind-icon">Projects<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/purchaseandsalesdetails.html" class="tsd-kind-icon">Purchase<wbr>And<wbr>Sales<wbr>Details</a>
@@ -509,6 +578,9 @@
 						<a href="interfaces/xeroclientconfiguration.html" class="tsd-kind-icon">Xero<wbr>Client<wbr>Configuration</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-private">
+						<a href="globals.html#escapestring" class="tsd-kind-icon">escape<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-private">
 						<a href="globals.html#generatequerystring" class="tsd-kind-icon">generate<wbr>Query<wbr>String</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-private">
@@ -537,6 +609,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -585,7 +658,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
